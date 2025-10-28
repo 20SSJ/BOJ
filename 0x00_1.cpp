@@ -11,10 +11,10 @@ int func1(int N){
 }
 
 int func2(int arr[], int n){
-    int hap = 0;
+    int occur[101] = {};
     for (int i = 0; i< n; i++){
-        for (int j = i + 1; j < n; j++) 
-            if (arr[i] + arr[j] == 100) return 1;
+        if (occur[100 - arr[i]]) return 1;
+        occur[arr[i]] = 1;
     }
     return 0;
 }
