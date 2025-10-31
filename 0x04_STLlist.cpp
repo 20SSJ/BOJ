@@ -5,13 +5,13 @@ using namespace std;
 int main(void){
     ios_base::sync_with_stdio(0);
     list<int> L = {1, 2};
-    list<int>::iterator t = L.begin();
-    L.push_front(10);
-    cout << *t << '\n';
-    L.push_back(5);
-    L.insert(t, 6);
+    list<int>::iterator t = L.begin(); // t -> 1
+    L.push_front(10); // 10 1 2 
+    cout << *t << '\n'; // 1
+    L.push_back(5); // 10 1 2 5 
+    L.insert(t, 6); // 10 6 1 2 5 
     t++;
-    t = L.erase(t);
+    t = L.erase(t); // 10 6 1 t->5   
 
     cout << *t << '\n';
     for(auto i : L) cout << i << ' ';
