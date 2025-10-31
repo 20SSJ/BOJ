@@ -10,7 +10,7 @@ int main(void){
     cout << *t << '\n'; // 1
     L.push_back(5); // 10 1 2 5 
     L.insert(t, 6); // 10 6 1 2 5 
-    t++;
+    t++; // t->2
     t = L.erase(t); // 10 6 1 t->5   
 
     cout << *t << '\n';
