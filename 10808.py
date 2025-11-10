@@ -1,7 +1,14 @@
-s = str(input())
+import sys
 
-arr = [0] * 26
-for i in s:
-    arr[ord(i) - ord('a')] += 1
+numbers = []
+for i in range(3):
+    numbers.append(int(input()))
+num = numbers[0] * numbers[1] * numbers[2]
 
-print(*arr)
+arr = [0] * 10
+
+for i in str(num):
+    arr[ord(i) - ord('0')] += 1
+
+for i in arr:
+    print(i)
