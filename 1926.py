@@ -18,7 +18,7 @@ num = 0 # 그림의 수
 
 for i in range(n):
     for j in range(m):
-        if board[i][j] or vis[i][j]:
+        if board[i][j] == 0 or vis[i][j]:
             continue
         num += 1
         Q = deque()
@@ -38,8 +38,7 @@ for i in range(n):
                 if vis[nx][ny] or board[nx][ny] != 1:
                     continue
 
-                vis[nx][ny] = True
-                
+                vis[nx][ny] = True   
                 Q.append((nx, ny))
             
             mx = max(mx, area)

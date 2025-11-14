@@ -4,8 +4,8 @@
 #include <queue>
 using namespace std;
 
-int n, m;
-int dx[4] = {1, 0, -1, 0};
+int n, m; // 세로, 가로
+int dx[4] = {1, 0, -1, 0}; 
 int dy[4] = {0, 1, 0, -1};
 string board[102];
 int dist[102][102];
