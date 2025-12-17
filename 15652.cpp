@@ -1,10 +1,9 @@
 #include <iostream>
-#define SIZE 9
 using namespace std;
 
 int n, m;
-int arr[SIZE];
-int isused[SIZE];
+int arr[9];
+
 void func(int num, int k){
     if (k == m){
         for (int i = 0; i < m; i++)
@@ -14,10 +13,8 @@ void func(int num, int k){
     }
 
     for (int i = num; i <= n; i++){
-        if(!isused[i]){
-            arr[k] = i;
-            func(i , k+1);
-        }
+        arr[k] = i;
+        func(i , k+1);
     }
 }
 
