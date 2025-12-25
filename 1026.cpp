@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-int n, e, result, total;
+int n, e, result;
 vector<int> a;
 vector<int> b;
 int main(){
@@ -21,9 +21,8 @@ int main(){
     sort(a.begin(), a.end());
     sort(b.rbegin(), b.rend());
     for(int i = 0; i < n; i++){
-        result = a[i] * b[i];
-        total += result;
+        result += a[i] * b[i];
     }
-    cout << total;
+    cout << result;
     return 0;
 }
