@@ -1,10 +1,6 @@
 #include <iostream>
-#include <stack>
 #include <queue>
 using namespace std;
-
-int x, n;
-vector <int> vec;
 
 struct cmp{
     bool operator()(int a, int b){
@@ -13,6 +9,7 @@ struct cmp{
     }
 };
 
+int x, n;
 int main(){
     cin.tie(0);
     ios_base::sync_with_stdio(0);
