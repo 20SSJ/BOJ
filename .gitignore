@@ -35,5 +35,8 @@
 *.exe
 *.out
 *.app
-/target/
+*.settings
+*.prefs
+*.classpath
 /bin/
+/target/
