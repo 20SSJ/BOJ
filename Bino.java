@@ -10,7 +10,6 @@ public class Bino {
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		int n = Integer.parseInt(st.nextToken());
 		int k = Integer.parseInt(st.nextToken());
-		int N = 1;
 		int[][] dp = new int[n+1][n+1];
 		
 		for (int i = 0; i <= n; i++) {
