@@ -11,26 +11,32 @@ import java.io.InputStreamReader;
  * 5 - 2번 2n + 1
  * 7 - 3번 2n + 1
  * (n-1) / 2
+ * 
+ * 숫자의 개수
+ * (n + 1) / 2
+ * 
+ * 연산자의 개수
+ * (n - 1) / 2
  */
 public class addBracket {
 	static int ans = Integer.MIN_VALUE;
 	static char[]ops;
 	static int[] nums;
-	static int SIZEOPS;
-	static int SIZENUMS;
+	static int SIZEOPS, SIZENUMS;
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
 		int n = Integer.parseInt(br.readLine());
-		SIZENUMS =  (n + 1)/ 2; // 숫자의 개수
-		SIZEOPS = (n - 1) / 2; // 연산자의 개수
+		SIZENUMS =  (n + 1)/ 2;
+		SIZEOPS = (n - 1) / 2;
 		ops = new char[SIZEOPS];
 		nums = new int[SIZENUMS];
+		String input = br.readLine();
 		int o = 0;
 		int nu = 0;
-		String input = br.readLine();
 		for(int i = 0; i < n; i++) {
 			char c = input.charAt(i);
-			if(Character.isDigit(c)) {
+			if(i % 2 == 0) {			// 짝수 인덱스는 숫자
 				int num = c - '0';
 				nums[nu++] = num;
 			} else ops[o++] = c;
