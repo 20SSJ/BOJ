@@ -49,9 +49,14 @@ public class gerry {
             }
             
 			if(Rgroup.size() == 0 || Bgroup.size() == 0) return;
-			
 			if(bfs(Rgroup) && bfs(Bgroup)){
-				
+				int sumR, sumB;
+				sumR = sumB = 0;
+				for(int i = 0; i < Rgroup.size(); i++) {
+				}
+				for(int i = 0; i < Bgroup.size(); i++) {
+				}
+				int res = Math.abs(sumR - sumB);
 			}
 			return;
 		}
