@@ -33,8 +33,10 @@ public class breakWallTwo {
 	
 	private static int bfs(int r, int c) {
 		if(N == 1 && M == 1) return 1;
+		
 		Queue<Node> q = new ArrayDeque<>();
 		int[][][] dist = new int[N][M][K + 1];
+		
 		q.offer(new Node(r, c, 0));
 		dist[r][c][0] = 1;
 		
